@@ -3,35 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Reliable NDT Engineering Services</title>
 </head>
+<style>
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.marquee-content {
+  display: inline-flex;
+  gap: 10px;
+  animation: marquee 20s linear infinite;
+}
+.polygon-bg {
+    clip-path: polygon(0 0, 100% 0, 100% 68%, 50% 95%, 0 68%);
+}
+</style>
 <body>
-<!-- NAVBAR -->
-    <nav class="flex bg-white px-8 justify-between items-center">
-        <img src="/assets/images/main-logo.png" alt="main-logo" class="w-[130px] h-[60px]">
-            <div class="hidden md:flex space-x-6">
-            <a href="/" class="text-[#6B7280] text-sm">Home</a>
-            <a href="/" class="text-[#6B7280] text-sm">About</a>
-            <a href="/" class="text-[#6B7280] text-sm">Mechanical Testing</a>
-            <a href="/" class="text-[#6B7280] text-sm">Civil Testing</a>
-            <a href="/" class="text-[#6B7280] text-sm">Contact</a>
-        </div>
-        <button class="bg-[#0057B7] text-white text-base font-medium rounded-lg px-3 py-1">Request a Quote</button>
-    </nav>
+    <!-- NAVBAR -->
+    <nav class="flex bg-white px-4 md:px-8 lg:px-8 justify-between items-center">
+      <a href="index.html"><img src="/assets/images/main-logo.png" alt="main-logo" class="w-[130px] h-[60px]"></a>
+           <div class="hidden md:flex space-x-6">
+           <a href="index.html" class="text-[#6B7280] text-sm">Home</a>
+           <a href="about-us.html" class="text-[#6B7280] text-sm">About</a>
+           <a href="mechanical-testing.html" class="text-[#6B7280] text-sm">Mechanical Testing</a>
+           <a href="civil-testing.html" class="text-[#6B7280] text-sm">Civil Testing</a>
+           <a href="contact-us.html" class="text-[#6B7280] text-sm">Contact</a>
+       </div>
+       <button class="bg-[#0057B7] text-white text-base font-medium rounded-lg px-3 py-1">Request a Quote</button>
+   </nav>
 <!-- NAVBAR ENDs-->
 
 <!-- BANNER SECTION -->
     <section class="relative bg-cover bg-center h-screen" style="background-image: url('/assets/images/bg-banner-img.webp');">
         <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div class="relative z-10 flex items-center justify-start h-full text-white text-left px-10">
+        <div class="relative z-10 flex items-center justify-start h-full text-white text-left px-4 lg:px-10">
             <div class="max-w-4xl">
                 <h1 class="text-xl md:text-4xl lg:text-6xl font-bold text-nowrap">Reliable NDT Engineering Services</h1>
                 <p class="text-xl md:text-4xl lg:text-6xl font-bold text-[#0057B7] mt-2">Precision & Quality Assured</p>
                 <p class="mt-6 text-xl text-[#D1D5DB]">Providing Non-Destructive Testing & Inspection Services since 2020. Industry-leading expertise in ensuring structural integrity and safety.</p>
                 <div class="mt-10 flex flex-col md:flex-row justify-start gap-4">
-                    <button class="px-5 py-2 bg-[#0057B7] text-white rounded-[8px] text-base font-medium">Explore Services</button>
-                    <button class="px-5 py-2 bg-white text-[#000] rounded-[8px] text-base font-medium">Request a Quote</button>
+                    <button class="px-3 py-1 md:px-5 py-2 lg:px-5 py-2 bg-[#0057B7] text-white rounded-[8px] text-base font-medium">Explore Services</button>
+                    <button class="px-3 py-1 md:px-5 py-2 lg:px-5 py-2 bg-white text-[#000] rounded-[8px] text-base font-medium">Request a Quote</button>
                 </div>
             </div>
         </div>
@@ -39,7 +62,7 @@
 <!-- BANNER SECTION ENDs-->
 
 <!-- ABOUT COMPANY SECTION -->
-<div class="mx-auto bg-white px-8 py-12 rounded-lg">
+<div class="mx-auto bg-white px-4 py-4 md:px-8 md:py-10 lg:px-8 lg:py-12 rounded-lg">
     <div class="md:flex justify-between items-center">
         <div class="md:w-2/4">
             <h2 class="text-3xl font-bold text-[ #111827]">About Our Company</h2>
@@ -78,40 +101,352 @@
  <!-- ABOUT COMPANY SECTION ENDs-->
 
 <!-- OUR SERVICES SECTION-->
-  <div class="bg-[#F9FAFB] text-center">
-    <h2 class="text-3xl font-bold text-[#111827]">Our Services</h2>
-    <p class="text-[#4B5563] text-lg font-normal">Comprehensive NDT solutions for various industrial applications</p>
+<div class="bg-[#F9FAFB] flex">
+    <div class="text-center w-full p-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#111827] mb-2">Our Services</h2>
+        <p class="text-[#4B5563] text-lg md:text-xl font-normal mb-2"> Comprehensive NDT solutions for various industrial applications</p>
+        <div class=" max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 px-6 lg:px-12">
+            <div class="mx-auto">
+                <div class="relative bg-white px-6 pb-14 pt-12">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-[#0057B7]"></div>
+                    <img src="/assets/images/testing-img.png" alt="Testing Icon" class="mb-3 w-[60px] h-[60px]">
+                    <h3 class="text-sm text-[#0057B7] font-semibold text-left">TESTING</h3>
 
-    <div class="mt-6 grid grid-cols-2 gap-4 max-w-3xl mx-auto"> 
-        <div class="rounded-lg">
-            <div class="p-6 bg-white text-center">
-                <img src="/assets/images/testing-img.png" alt="Icon" class="mx-auto w-[60px] h-[24px]">
-                <p class="text-blue-500 font-bold text-xs mt-2">TESTING</p>
-                <h3 class="font-semibold text-lg">Mechanical Testing</h3>
+                    <h2 class="text-xl font-bold text-[#101010] text-left">Mechanical Testing</h2>
+                </div>
+                <img src="/assets/images/testing-man-img.png" alt="Mechanical Testing" class="w-[260px] mt-[10px]">
             </div>
-            <img src="/assets/images/testing-man-img.png" alt="Mechanical Testing" class="w-[260px] h-[180px]">
+            <div class="bg-[rgba(214,228,240,0.53)] mx-auto">
+                <div class="relative bg-[rgba(0,87,183,0.53)] text-white px-6 pb-14 pt-12 polygon-bg">
+                    <img src="/assets/images/testing-plant-img.png" alt="Testing Icon" class=" mb-3 w-[60px] h-[60px]">
+                    <h3 class="text-sm text-[#0057B7] font-semibold text-left">TESTING</h3>
+                    <h2 class="text-xl font-bold text-[#101010] text-left">Tests on Weldments</h2>
+                </div>
+                <img src="/assets/images/testing-screen.png" alt="Weldment Test" class="w-[260px] mt-[10px] bg-opacity-70">
+            </div>
         </div>
-
-        <!-- <div class="rounded-lg">
-            <div class="p-6 bg-[rgba(0,87,183,0.53)] text-white text-center relative">
-                <img src="/assets/images/testing-plant-img.png" alt="Icon" class="mx-auto opacity-80">
-                <p class="font-bold text-xs mt-2">TESTING</p>
-                <h3 class="font-semibold text-lg">Tests on weldments</h3>
-                <div class="absolute bottom-0 left-0 w-full h-6 bg-white transform rotate-180"></div>
-            </div>
-            <img src="/assets/images/testing-screen.png" alt="Tests on Weldments" class="w-full">
-        </div> -->
     </div>
 </div>
  <!-- OUR SERVICES SECTION ENDs-->
 
  <!-- OUR JOURNEY SECTION-->
-
-
-
-
+ <div class="bg-white px-4 py-4 md:px-8 md:py-8 lg:px-8 lg:py-8">
+    <div class="text-center pb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#111827] pt-4">Our Journey</h2>
+        <p class="text-[#4B5563] text-lg md:text-xl font-normal pt-4">Milestones that shaped our success</p>
+    </div>
+    <div class="relative flex items-center justify-center">
+        <div class="absolute top-[25%] w-full h-[2px] bg-[#E5E7EB]"></div>
+        <div class="grid grid-cols-5 gap-6 w-full max-w-7xl mx-auto relative z-10">
+            <div class="flex flex-col items-center">
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-[#0057B7] text-white rounded-full">
+                    <i class="fas fa-flag text-md"></i>
+                </div>
+                <p class="text-[#111827] font-semibold pt-4 text-base">2020</p>
+                <p class="text-[#0057B7] text-sm font-medium">Company Founded</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-[#E67E22] text-white rounded-full">
+                    <i class="fa-solid fa-certificate" style="color: white;"></i>
+                </div>
+                <p class="text-[#111827] font-semibold pt-4 text-base">2021</p>
+                <p class="text-[#E67E22] text-sm font-medium">ISO Certification</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-[#0057B7] text-white rounded-full">
+                    <i class="fas fa-building text-md"></i>
+                </div>
+                <p class="text-[#111827] font-semibold pt-4 text-base">2022</p>
+                <p class="text-[#0057B7] text-sm font-medium">Expansion</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-[#E67E22] text-white rounded-full">
+                    <i class="fas fa-award text-md"></i>
+                </div>
+                <p class="text-[#111827] font-semibold pt-4 text-base">2023</p>
+                <p class="text-[#E67E22] text-sm font-medium">Industry Recognition</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-12 h-12 flex items-center justify-center bg-[#0057B7] text-white rounded-full">
+                    <i class="fas fa-globe text-md"></i>
+                </div>
+                <p class="text-[#111827] font-semibold pt-4 text-base">2024</p>
+                <p class="text-[#0057B7] text-sm font-medium">Global Expansion</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center pt-16 pb-10 space-x-4">
+        <button class="w-[38px] h-[36px] bg-[rgba(0,87,183,1)] text-white rounded-[6px]">
+            <i class="fas fa-chevron-left text-md"></i>
+        </button>
+        <button class="w-[38px] h-[36px] bg-[rgba(0,87,183,1)] text-white rounded-[6px]">
+            <i class="fas fa-chevron-right text-md"></i>
+        </button>
+    </div>
+</div>
  <!-- OUR JOURNEY SECTION ENDs-->
 
+ <!-- INDUSTRIES WE SERVE SECTION-->
+    <div class="text-center bg-[#F9FAFB] px-4 py-4 md:px-8 md:py-8 lg:px-8 lg:py-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#111827] mb-2">Industries We Serve</h2>
+        <p class="text-lg text-gray-600 mb-8">Providing specialized NDT solutions across various sectors</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Industry Card 1 -->
+            <div class="relative rounded-lg overflow-hidden">
+                <img src="/assets/images/oil-gas-img.png" alt="Oil & Gas" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0),rgba(0,0,0,0)),linear-gradient(0deg,#111827_0%,rgba(0,0,0,0)_100%)]"></div>
+                <div class="absolute bottom-2 left-2 text-white font-semibold">Oil & Gas</div>
+              </div>
+            <!-- Industry Card 2 -->
+            <div class="relative rounded-lg overflow-hidden">
+                <img src="/assets/images/power-generation-img.png" alt="power-generation-img" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0),rgba(0,0,0,0)),linear-gradient(0deg,#111827_0%,rgba(0,0,0,0)_100%)]"></div>
+                <div class="absolute bottom-2 left-2 text-white font-semibold">Power Generation</div>
+              </div>
+            <!-- Industry Card 3 -->
+            <div class="relative rounded-lg overflow-hidden">
+                <img src="/assets/images/aerospace-img.png" alt="aerospace-img" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0),rgba(0,0,0,0)),linear-gradient(0deg,#111827_0%,rgba(0,0,0,0)_100%)]"></div>
+                <div class="absolute bottom-2 left-2 text-white font-semibold">Aerospace</div>
+              </div>
+            <!-- Industry Card 4 -->
+            <div class="relative rounded-lg overflow-hidden">
+                <img src="/assets/images/construction-img.png" alt="construction-img" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0),rgba(0,0,0,0)),linear-gradient(0deg,#111827_0%,rgba(0,0,0,0)_100%)]"></div>
+                <div class="absolute bottom-2 left-2 text-white font-semibold">Construction</div>
+              </div>
+        </div>
+    </div>
+ <!-- INDUSTRIES WE SERVE SECTION ENDs-->
 
+ <!-- OUR TRUSTED CLIENTS-->
+    <div class="px-4 py-4 md:px-8 md:py-8 lg:px-8 lg:py-8">
+        <h2 class="text-center text-3xl md:text-4xl font-bold text-[#111827] mb-2">Trusted Clients</h2>
+        <p class="text-center text-lg text-gray-600 mb-8">Providing specialized NDT solutions across various sectors</p>
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+              <!-- Repeat logos -->
+              <div class="bg-gray-300 rounded-md flex items-center justify-center p-2">
+                <img src="/assets/images/main-logo.png" alt="main-logo" class="object-contain" />
+              </div>
+              <div class="bg-gray-300 rounded-md flex items-center justify-center p-2">
+                <img src="/assets/images/main-logo.png" alt="main-logo" class="object-contain" />
+              </div>
+              <div class="bg-gray-300 rounded-md flex items-center justify-center p-2">
+                <img src="/assets/images/main-logo.png" alt="main-logo" class="object-contain" />
+              </div>
+              <div class="bg-gray-300 rounded-md flex items-center justify-center p-2">
+                <img src="/assets/images/main-logo.png" alt="main-logo" class="object-contain" />
+              </div>
+              <div class="bg-gray-300 rounded-md flex items-center justify-center p-2">
+                <img src="/assets/images/main-logo.png" alt="main-logo" class="object-contain" />
+              </div>
+          
+              <!-- Duplicate for looping -->
+              <div class="bg-gray-300 rounded-md flex items-center justify-center p-2">
+                <img src="/assets/images/main-logo.png" alt="main-logo" class="object-contain" />
+              </div>
+              <div class="bg-gray-300 rounded-md flex items-center justify-center p-2">
+                <img src="/assets/images/main-logo.png" alt="main-logo" class="object-contain" />
+              </div>
+              <div class="bg-gray-300 rounded-md flex items-center justify-center p-2">
+                <img src="/assets/images/main-logo.png" alt="main-logo" class="object-contain" />
+              </div>
+            </div>
+          </div>      
+    </div>
+ <!-- OUR TRUSTED CLIENTS ENDs-->
+
+<!-- CLIENT TESTIMONIALS SECTION -->
+    <div class="px-4 py-4 md:px-8 md:py-8 lg:px-8 lg:py-8">
+        <h2 class="text-center text-3xl md:text-4xl font-bold text-[#111827] mb-2">Client Testimonials</h2>
+        <p class="text-center text-lg text-gray-600 mb-8">What our clients say about our NDT services</p>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+        <!-- Testimonial Card 1 -->
+        <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-[5px_5px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+                <div class="flex space-x-1 text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+            </div>
+            <p class="text-[#4B5563] text-base font-semibold mb-4"><span class="text-base font-semibold text-[#4B5563] mr-1">“</span>"Their NDT services have been instrumental in maintaining our facility's safety standards. The team's expertise and professionalism are unmatched."<span class="text-2xl text-blue-300 font-serif ml-1">”</span></p>
+            <div class="flex items-center mt-6">
+                <img src="/assets/images/profile-img.png" alt="Profile" class="w-12 h-12 rounded-full object-cover mr-4" />
+            <div>
+                <p class="text-[#111827] font-bold text-base text-left">Rohit Dhankhar</p>
+                <p class="text-[#6B7280] text-base font-normal">Operations Manager, PetroTech</p>
+            </div>
+            </div>
+        </div>
+          
+        <!-- Testimonial Card 2 -->
+        <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-[5px_5px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+                <div class="flex space-x-1 text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+            </div>
+            <p class="text-[#4B5563] text-base font-semibold mb-4"><span class="text-base font-medium text-[#4B5563] font-serif mr-1">“</span>"Exceptional attention to detail and quick turnaround times. Their advanced NDT techniques helped us identify potential issues early."<span class="text-2xl text-blue-300 font-serif ml-1">”</span></p>
+            <div class="flex items-center mt-6">
+             <img src="/assets/images/profile-img.png" alt="Profile" class="w-12 h-12 rounded-full object-cover mr-4" />
+            <div>
+                <p class="text-[#111827] font-bold text-base text-left">Manish Kumar</p>
+                <p class="text-[#6B7280] text-base font-normal">Quality Manager, PowerGen Solutions</p>
+            </div>
+            </div>
+        </div>
+          
+        <!-- Testimonial Card 3 -->
+        <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-[5px_5px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+                <div class="flex space-x-1 text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+            </div>
+            <p class="text-[#4B5563] text-base font-semibold mb-4"><span class="text-base font-medium text-[#4B5563] font-serif mr-1">“</span>"We've been working with them for years, and their consistency in delivering quality NDT services has been remarkable."<span class="text-2xl text-blue-300 font-serif ml-1">”</span></p>
+            <div class="flex items-center mt-6">
+             <img src="/assets/images/profile-img.png" alt="Profile" class="w-12 h-12 rounded-full object-cover mr-4" />
+            <div>
+                <p class="text-[#111827] font-bold text-base text-left">Akshay Rao</p>
+                <p class="text-[#6B7280] text-base font-normal">Project Director, BuildCorp</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Dots -->
+    <div class="mt-6 flex justify-center space-x-2">
+        <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+        <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+        <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+    </div>
+</div>
+<!-- CLIENT TESTIMONIALS SECTION ENDs -->
+
+<!-- CONTACT US SECTION -->
+<section class="bg-gray-50 py-8 px-4 md:py-10 md:px-8 lg:py-12 lg:px-8">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
+        <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-[#111827] pb-4">Contact Us</h2>
+            <p class="text-[#4B5563] text-lg md:text-xl font-normal pb-8">
+              Get in touch with our experts for your NDT testing needs
+            </p>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-[#374151]">Name</label>
+                <input type="text" class="outline-none mt-1 w-full rounded-md border border-[#D1D5DB] p-2 shadow-sm" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-[#374151]">Phone Number</label>
+                <input type="text" class="outline-none mt-1 w-full rounded-md border border-[#D1D5DB] p-2 shadow-sm" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-[#374151]">Email</label>
+                <input type="email" class="outline-none mt-1 w-full rounded-md border border-[#D1D5DB] p-2 shadow-sm" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-[#374151]">Service</label>
+                <input type="text" class="outline-none mt-1 w-full rounded-md border border-[#D1D5DB] p-2 shadow-sm" />
+              </div>
+              <div class="md:col-span-2">
+                <label class="block text-sm font-medium text-[#374151]">Message</label>
+                <textarea rows="4" class="resize-none outline-none mt-1 w-full rounded-md border border-[#D1D5DB] p-2 shadow-sm"></textarea>
+              </div>
+              <div class="md:col-span-2 flex justify-center">
+                <button type="submit" class="bg-[#0057B7] text-white font-semibold py-2 px-6 rounded-md shadow-sm w-full">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+          
+      <div class="max-w-lg bg-white rounded-xl shadow py-4 px-2 lg:px-4 lg:py-6 relative ">
+        <h2 class="text-xl font-semibold text-[#111827] mb-2">Our Location</h2>
+        <div class="space-y-3 text-gray-700 mb-4">
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-location-dot text-[#0057B7]"></i>
+            <span class="text-[#4B5563] font-normal text-base">
+              Ranhera, Chhata, Mathura, Uttar Pradesh.
+            </span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-phone text-[#0057B7]"></i>
+            <span class="text-[#3D3D3D] font-medium text-base">
+              9079167736, 8630613233
+            </span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-envelope text-[#0057B7]"></i>
+            <span class="text-[#3D3D3D] font-medium text-base">
+              reliablendtengineeringservices@gmail.com
+            </span>
+          </div>
+        </div>
+        <div class="relative">
+          <iframe
+            class="w-full h-[250px] rounded-md"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.9856950022163!2d77.57770767447398!3d27.748587223673155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39734199380b99a1%3A0x5ce1234b3fa5690b!2sReliable%20ndt%20inspection%20services!5e0!3m2!1sen!2sin!4v1743916448318!5m2!1sen!2sin"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <img
+        src="/assets/images/googleMap-bgImage.png"
+        alt="Man Holding Map"
+        class="absolute -right-[27%] bottom-[6%] w-[200px] h-[400px] hidden md:block lg:block pointer-events-none"
+      />
+      </div>
+    </div>
+</section>
+<!-- CONTACT US SECTION ENDs -->
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 py-4 md:py-6 lg:py-6">
+  <div class="max-w-7xl px-8 flex flex-col md:flex-row justify-between gap-8">
+    <div class="max-w-sm">
+     <a href="index.html"><img src="/assets/images/main-logo-white.png" alt="main-logo-white" class="w-[130px] h-[50px] mb-3"></a>
+      <p class="text-base text-[#9CA3AF] font-normal">Leading provider of NDT testing services with a commitment to quality and precision.</p>
+      <div class="flex space-x-4 mt-4">
+          <a href="#" class="text-[#9CA3AF] hover:text-white text-xl">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="text-[#9CA3AF] hover:text-white text-xl">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-[#9CA3AF] hover:text-white text-xl">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-[#FFFFFF]">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="text-[#9CA3AF] hover:text-white">About Us</a></li>
+        <li><a href="contact-us.html" class="text-[#9CA3AF] hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-[#FFFFFF]">Services</h3>
+      <ul class="space-y-2">
+        <li><a href="civil-testing.html" class="text-[#9CA3AF] hover:text-white">Civil Testing Service</a></li>
+        <li><a href="mechanical-testing.html" class="text-[#9CA3AF] hover:text-white">Mechanical Testing Service</a></li>
+      </ul>
+    </div>
+  </div>
+<div class="border-t border-[#1F2937] mt-8"></div>
+<p class="text-center text-[#9CA3AF] text-base mt-4">© 2024 NDT Testing Services. All rights reserved.</p>
+</footer>
+<!-- FOOTER ENDs-->
 </body>
 </html>
